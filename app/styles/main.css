@@ -28,6 +28,8 @@ body {
     padding: 0.2em 0;
 }
 
+/* menu customization*/
+
 .pure-menu.pure-menu-pull-right {
     background: #eeeeee;
     display: table;
@@ -50,5 +52,30 @@ body {
     text-align: left;
 }
 
+/* icon customization */
+
+*.icon-blue {color: red}
+*.icon-grey {color: grey}
+i {   
+    width:100px;
+    text-align:center;
+    vertical-align:middle;
+    position: relative;
+}
+.badge:after{
+    content:attr(data-count);
+    position: absolute;
+    background: red;
+    height:1.5rem;
+    top:.75rem;
+    right:1.5rem;
+    width:1.5rem;
+    text-align: center;
+    line-height: 1.5rem;;
+    font-size: 1rem;
+    border-radius: 50%;
+    color:white;
+    border:2px solid white;
+}
 
 

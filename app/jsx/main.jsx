@@ -17,7 +17,7 @@ require(['app'], function (App) {
     // use app here
 
     React.renderComponent(
-	    <App url="comments.json" pollingInterval={2000} />,
+	    <App url="comments.json"  />,
 	document.getElementById('app')
     );
 });
