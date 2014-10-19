@@ -40,7 +40,7 @@ define([], function () {
             <div className="dropdown-panel">
               {itemNodes}
               <p>Total = ${totalPrice}</p>
-              <button>Go To Checkout</button>
+              <a href="#checkout" className="pure-button" rel="modal:open">Go To Checkout</a>
             </div>
           </div>
       );
@@ -57,7 +57,7 @@ define([], function () {
               <h4 className="productPrice">
                 ${this.props.price}
               </h4>
-              <button onClick={this.props.handleSubmit.bind(null,this)}>Add to Cart</button>
+              <button className="pure-button" onClick={this.props.handleSubmit.bind(null,this)}>Add to Cart</button>
             </div>
         );
     }
@@ -109,6 +109,16 @@ define([], function () {
     }
   });
 
+  var Checkout = React.createClass({
+    render: function() {
+      return (
+        <div id="checkout" className="checkout">
+          <p>Implement checkout form here or integrate stripe or some other service</p>
+        </div>
+      );
+    }
+  });
+
   var ShoppingCart = React.createClass({
     loadProductsFromServer: function() {
       $.ajax({
@@ -147,6 +157,7 @@ define([], function () {
               <h1>Products</h1>
               <ProductList data={this.state.data} handleSubmit={this.handleSubmit}/>
               <DropdownList items={this.state.selected} handleDelete={this.handleDelete} />
+              <Checkout />
             </div>
           </div>
         );

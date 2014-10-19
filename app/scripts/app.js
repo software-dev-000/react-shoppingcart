@@ -40,7 +40,7 @@ define([], function () {
             React.DOM.div( {className:"dropdown-panel"}, 
               itemNodes,
               React.DOM.p(null, "Total = $",totalPrice),
-              React.DOM.button(null, "Go To Checkout")
+              React.DOM.a( {href:"#checkout", className:"pure-button", rel:"modal:open"}, "Go To Checkout")
             )
           )
       );
@@ -57,7 +57,7 @@ define([], function () {
               React.DOM.h4( {className:"productPrice"}, 
                 " $",this.props.price
               ),
-              React.DOM.button( {onClick:this.props.handleSubmit.bind(null,this)}, "Add to Cart")
+              React.DOM.button( {className:"pure-button", onClick:this.props.handleSubmit.bind(null,this)}, "Add to Cart")
             )
         );
     }
@@ -109,6 +109,16 @@ define([], function () {
     }
   });
 
+  var Checkout = React.createClass({displayName: 'Checkout',
+    render: function() {
+      return (
+        React.DOM.div( {id:"checkout", className:"checkout"}, 
+          React.DOM.p(null, "Implement checkout form here or integrate stripe or some other service")
+        )
+      );
+    }
+  });
+
   var ShoppingCart = React.createClass({displayName: 'ShoppingCart',
     loadProductsFromServer: function() {
       $.ajax({
@@ -146,7 +156,8 @@ define([], function () {
             React.DOM.div( {className:"shoppingMain"}, 
               React.DOM.h1(null, "Products"),
               ProductList( {data:this.state.data, handleSubmit:this.handleSubmit}),
-              DropdownList( {items:this.state.selected, handleDelete:this.handleDelete} )
+              DropdownList( {items:this.state.selected, handleDelete:this.handleDelete} ),
+              Checkout(null )
             )
           )
         );

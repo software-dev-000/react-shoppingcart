@@ -32,6 +32,10 @@ body {
     text-align:center;
 }
 
+.checkout {
+    display:none;
+}
+
 /* menu customization*/
 
 .pure-menu.pure-menu-pull-right {
