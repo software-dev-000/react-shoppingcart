@@ -1,0 +1,14 @@
+{
+  "name": "jquery-modal",
+  "homepage": "https://github.com/kylefox/jquery-modal",
+  "version": "0.5.2",
+  "_release": "0.5.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.5.2",
+    "commit": "d9951ccccc1ed03b71068c1817dd767052a888a0"
+  },
+  "_source": "git://github.com/kylefox/jquery-modal.git",
+  "_target": "~0.5.2",
+  "_originalSource": "jquery-modal"
+}
