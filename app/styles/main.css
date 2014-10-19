@@ -28,6 +28,10 @@ body {
     padding: 0.2em 0;
 }
 
+.shoppingMain {
+    text-align:center;
+}
+
 /* menu customization*/
 
 .pure-menu.pure-menu-pull-right {
@@ -56,7 +60,7 @@ body {
 
 *.icon-blue {color: red}
 *.icon-grey {color: grey}
-i {   
+.pure-menu-pull-right i {   
     width:100px;
     text-align:center;
     vertical-align:middle;
